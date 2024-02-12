@@ -22,3 +22,8 @@
 
 <dl>
 <hr>
+
+<% matching_movies = Movie.where({ :director_id => @the_director.id }) %>
+<% matching_movies.each do |a_movie| %>
+<li> <%= a_movie %> </li>
+<% end %>
